@@ -1,24 +1,29 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Section2 = () => (
     <section id="features">
-        <div class="container px-5">
+        <div class="container px-100">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
                     <div class="container-fluid px-5">
                         <div class="row gx-5">
                             <div class="col-md-6 mb-5">
                                 <div class="text-center">
-                                    <i class="bi-person icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Organization</h3>
-                                    <p class="text-muted mb-0">Organization of Core Newtork Group in Contela.</p>
+                                    <NavLink to="/organization" style={{ textDecoration: "none", color: "black" }}>
+                                        <i class="bi-person icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Organization</h3>
+                                    </NavLink>
+                                    <p class="text-muted mb-0">Organization of Core Network Group in Contela.</p>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-5">
                                 <div class="text-center">
-                                    <i class="bi-files icon-feature text-gradient d-block mb-3"></i>
-                                    <h3 class="font-alt">Documentation</h3>
-                                    <p class="text-muted mb-0">PC Setup Procedure, Coding Rule, EMS API, etc.</p>
+                                    <NavLink to="/documentation" style={{ textDecoration: "none", color: "black" }}>
+                                        <i class="bi-files icon-feature text-gradient d-block mb-3"></i>
+                                        <h3 class="font-alt">Documentation</h3>
+                                    </NavLink>
+                                    <p class="text-muted mb-0">APIs, PC Setup Procedure, Coding Rule etc.</p>
                                 </div>
                             </div>
                         </div>
