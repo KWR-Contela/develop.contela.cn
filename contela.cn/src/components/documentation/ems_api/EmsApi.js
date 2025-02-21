@@ -105,8 +105,11 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 저장된 모든 PLMN 정보들을 Display<br/>
-                            (PLMN 최대 개수: 4개)
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 저장된 모든 PLMN 정보들을 Display<br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                PLMN 최대 개수: 4개
                             </td>
                         </tr>
                         <tr>
@@ -125,7 +128,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 PLMN을 Create</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 PLMN을 Create</td>
                         </tr>
                         <tr>
                             <td>DELETE <BsCheckSquare /></td>
@@ -143,7 +148,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 저장된 PLMN을 Delete</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 저장된 PLMN을 Delete</td>
                         </tr>
 
                         <tr>
@@ -162,8 +169,11 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                        <td>PCF에 저장된 모든 TAC 정보들을 Display<br/>
-                        (TAC 최대 개수: 32개)
+                        <td>
+                            <b>[Description]</b><br/>
+                            PCF에 저장된 모든 TAC 정보들을 Display<br/><br/>
+                            <b>[Restrictions]</b><br/>
+                            TAC 최대 개수: 32개
                         </td>
                         </tr>
                         <tr>
@@ -182,7 +192,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 TAC를 Create</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 TAC를 Create</td>
                         </tr>
                         <tr>
                             <td>DELETE <BsCheckSquare /></td>
@@ -200,7 +212,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 저장된 TAC를 Delete</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 저장된 TAC를 Delete</td>
                         </tr>
 
                     </tbody>
@@ -230,7 +244,7 @@ const EmsApi = () => (
                                 <p style={{whiteSpace: "pre-wrap"}}><b>Success</b>
                                 <br/>Code: 200 OK
                                 <br/>Content: 1*10<i>(AM Policy Name,
-                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                     Required</i></sup>
+                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                              Required</i></sup>
                                 <br/>                RFSP Index,
                                 <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                     Required</i></sup>
                                 <br/>                Service Area Resctriction)</i>
@@ -239,8 +253,7 @@ const EmsApi = () => (
                                 <pre>
                                     Ex)
                                     <br/>&#123;
-                                    <br/>  "amPolicyInfo": [
-                                    <br/>    &#123;
+                                    <br/>  "amPolicyInfo": &#123;
                                     <br/>      "amPolicyName": "TestName1",
                                     <br/>      "rfspIndex": 2,
                                     <br/>      "serviceAreaRestriction": &#123;
@@ -250,28 +263,22 @@ const EmsApi = () => (
                                     <br/>          55
                                     <br/>        ]
                                     <br/>      &#125;
-                                    <br/>    &#125;,
-                                    <br/>    &#123;
-                                    <br/>      "amPolicyName": "TestName2",
-                                    <br/>      "rfspIndex": 5,
-                                    <br/>      "serviceAreaRestriction": &#123;
-                                    <br/>        "type": 0,
-                                    <br/>        "tac": [
-                                    <br/>          999
-                                    <br/>        ]
-                                    <br/>      &#125;
                                     <br/>    &#125;
-                                    <br/>  ]
+                                    <br/>  &#125;
                                     <br/>&#125;
                                 </pre><hr/>                                              
                                 <p><b>Fail</b>
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에서 모든 AM Policy Info의 정보를 Display<br/>
-                            (AM Policy Info 최대 개수: 10개,<br/>
-                            AM Policy Name 최대 길이: 64,<br/>
-                            RFSP Index 범위: 1 ~ 256)
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에서 모든 AM Policy Info의 정보를 Display<br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                AM Policy Info 최대 개수: 10개,<br/>
+                                AM Policy Name 최대 길이: 64,<br/>
+                                RFSP Index 범위: 1 ~ 256<br/><br/>
+                                여러개인 경우, Linked Reply로 전송함.
                             </td>
                             
                         </tr>
@@ -306,7 +313,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 AM Policy Info를 Create</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 AM Policy Info를 Create</td>
                         </tr>
                         <tr>
                             <td>PUT <BsCheckSquare /></td>
@@ -319,7 +328,6 @@ const EmsApi = () => (
                                     <br/>  "amPolicyInfo": &#123;
                                     <br/>    "amPolicyName": "TestName1",
                                     <br/>    "serviceAreaRestriction": &#123;
-                                    <br/>      "type": 0,
                                     <br/>      "tac": [
                                     <br/>        2
                                     <br/>      ]
@@ -335,7 +343,12 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에서 AM Policy Info의 정보를 Change</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에서 AM Policy Info의 정보를 Change<br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                AM Policy Name, Service Area Restriction Type은 변경할 수 없음.
+                            </td>
                         </tr>
                         <tr>
                             <td>DELETE <BsCheckSquare /></td>
@@ -355,7 +368,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에서 AM Policy Info를 Delete</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에서 AM Policy Info를 Delete</td>
                         </tr>
 
                         <tr>
@@ -379,7 +394,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에 저장된 AM Policy Info의 모든 AM Policy Name들을 Display</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에 저장된 AM Policy Info의 모든 AM Policy Name들을 Display</td>
                         </tr>
                         
                         <tr>
@@ -414,7 +431,9 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>PCF에서 AM Policy Name이 <i>value</i>인 AM Policy Info를 Display</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF에서 AM Policy Name이 <i>value</i>인 AM Policy Info를 Display</td>
                         </tr>
                         
 
@@ -438,8 +457,8 @@ const EmsApi = () => (
                     </thead>
                     <tbody>
                     <tr>
-                            <td rowSpan='5'>/policy-by-subs</td>
-                            <td rowSpan='2'>GET <BsCheckSquare /></td>
+                            <td rowSpan='6'>/policy-by-subs</td>
+                            <td rowSpan='3'>GET <BsCheckSquare /></td>
                             <td>
                                 <p><i>IMSI</i><br/>
                                 <sup><i class="ApiMandatory">Required</i></sup></p>
@@ -452,18 +471,27 @@ const EmsApi = () => (
                             <td>
                                 <p><b>Success</b>
                                 <br/>Code: 200 OK
-                                <br/>Content: <i>AM Policy Name</i>
+                                <br/>Content: <i>[AM Policy Name],
+                                <br/>[URSP Rule Ids]</i>
                                 <br/></p>
                                 <pre>
                                     Ex)<br/>&#123;
-                                    <br/>  "amPolicyName": "TestName1"
+                                    <br/>  "amPolicyName": "TestName1",
+                                    <br/>  "urspRuleIds": [
+                                    <br/>    "TestRuleId1",
+                                    <br/>    "TestRuleId2",
+                                    <br/>    "TestRuleId3"
+                                    <br/>  ]
                                     <br/>&#125;
                                 </pre><hr/>
                                 <p><b>Fail</b>
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>Policy by Subs List에서 IMSI에 적용된 AM Policy Name을 Display</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy By Subs에서 IMSI에 적용된 AM Policy Name 및 URSP Rule Ids를  Display
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -492,8 +520,45 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>Policy by Subs List에서 AM Policy Name이 적용된 IMSI들을 Display<br/>
-                            (1개 AM Policy Name에 대응될 수 있는 최대 IMSI 개수: 20000개)
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy by Subs List에서 AM Policy Name이 적용된 IMSI들을 Display<br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                1개 AM Policy Name에 대응될 수 있는 최대 IMSI 개수: 20000개
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><i>URSP Rule ID</i><br/>
+                                <sup><i class="ApiMandatory">Required</i></sup></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRule1"
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 200 OK
+                                <br/>Content: 1*20000<i>IMSI</i>
+                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                     Required</i></sup></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "imsi": [
+                                    <br/>    "450051000000000",
+                                    <br/>    "999991000000005"
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy by Subs에서 URSP Rule이 적용된 IMSI들을 Display<br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                1개 URSP Rule ID에 대응될 수 있는 최대 IMSI 개수: 20000개
                             </td>
                         </tr>
                         <tr>
@@ -501,11 +566,17 @@ const EmsApi = () => (
                             <td>
                                 <p><i>IMSI,<br/>
                                 <sup><i class="ApiMandatory">Required</i></sup><br/>
-                                AM Policy Name</i><br/></p>
+                                [AM Policy Name],
+                                <br/>[URSP Rule IDs]</i><br/></p>
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": "450051000000000",
-                                    <br/>  "amPolicyName": "TestName1"
+                                    <br/>  "amPolicyName": "TestName1",
+                                    <br/>  "urspRuleIds": [
+                                    <br/>    "TestRuleId1",
+                                    <br/>    "TestRuleId2",
+                                    <br/>    "TestRuleId3"
+                                    <br/>  ]
                                     <br/>&#125;
                                 </pre>
                             </td>
@@ -516,18 +587,26 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>Policy by Subs List에 IMSI와 적용할 AM Policy Name을 Create</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy by Subs List에 IMSI와 적용할 AM Policy Name 및 URSP Rule Ids를 Create</td>
                         </tr>
                         <tr>
                             <td>PUT <BsCheckSquare /></td>
                             <td>
                                 <p><i>IMSI,<br/>
                                 <sup><i class="ApiMandatory">Required</i></sup><br/>
-                                &#123;AM Policy Name&#125;</i><br/></p>
+                                [AM Policy Name],<br/>
+                                [URSP Rule IDs]</i><br/></p>
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": "450051000000000",
-                                    <br/>  "amPolicyName": "TestName2"
+                                    <br/>  "amPolicyName": "TestName2",
+                                    <br/>  "urspRuleIds": [
+                                    <br/>    "TestRuleId1",
+                                    <br/>    "TestRuleId2",
+                                    <br/>    "TestRuleId3"
+                                    <br/>  ]
                                     <br/>&#125;
                                 </pre>
                             </td>
@@ -538,14 +617,15 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 Not Found</p>
                             </td>
-                            <td>Policy by Subs List에서 IMSI에 적용된 AM Policy Name을 Change</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy by Subs List에서 IMSI에 적용된 AM Policy Name 및 URSP Rule Ids를 Change</td>
                         </tr>
                         <tr>
                             <td>DELETE <BsCheckSquare /></td>
                             <td>
-                                <p><i>IMSI,<br/>
-                                <sup><i class="ApiMandatory">Required</i></sup><br/>
-                                &#123;AM Policy Name&#125;</i></p>
+                                <p><i>IMSI<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": "450051000000000"
@@ -559,7 +639,208 @@ const EmsApi = () => (
                                 <br/>Code: 400 Bad Request                                
                                 <br/>Code: 404 not Found</p>
                             </td>
-                            <td>Policy by Subs List에서 IMSI에 적용된 AM Policy Name을 Delete</td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy by Subs List에서 IMSI에 적용된 AM Policy Name 및 URSP Rule Ids를 Delete</td>
+                        </tr>
+                        <tr>
+                            <td>/policy-by-subs/apply</td>
+                            <td>POST <BsCheckSquare /></td>
+                            <td>
+                                <p><i>IMSI,<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/>
+                                Policy Type<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "imsi": "450051000000000",
+                                    <br/>  "policyType": "ue"
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 204 No Content</p><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                Policy By Subs에 등록된 특정 IMSI에 대한 Policy의 강제 적용을 시도</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-header">
+                URSP Rule
+            </div>
+            <div class="card-body">
+                <table class="datatable-table">
+                    <thead>
+                        <tr>
+                            <th>Resource URI</th>
+                            <th>HTTP Method</th>
+                            <th>Request Body</th>
+                            <th>Response Body</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                            <td rowSpan='2'>/ue-policies/ursp-rules</td>
+                            <td>GET <BsCheckSquare /></td>
+                            <td></td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 200 OK
+                                <br/>Content: <i>URSP Rules??</i>
+                                <br/></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  [
+                                    <br/>    &#123;
+                                    <br/>      "urspRuleId": "TestRuleId1",
+                                    <br/>      "plmnId": "45005",
+                                    <br/>      "precedence": 0,
+                                    <br/>      "trafficDescriptors": [
+                                    <br/>        &#123;
+                                    <br/>          "type": "dnn",
+                                    <br/>          "value": "mcptt"
+                                    <br/>        &#125;
+                                    <br/>      ],
+                                    <br/>      "routeSelectionDescriptors": [
+                                    <br/>        &#123;
+                                    <br/>          "routeSelectionDescriptor": [
+                                    <br/>            &#123;
+                                    <br/>              "type": "SNSSAI",
+                                    <br/>              "value": "1-000000"
+                                    <br/>            &#125;
+                                    <br/>          ]
+                                    <br/>        &#125;
+                                    <br/>      ]
+                                    <br/>    &#125;,
+                                    <br/>    . . .
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF 내 생성된 모든 URSP Rule(s)를 조회</td>
+                        </tr>
+                        <tr>
+                            <td>POST <BsCheckSquare /></td>
+                            <td>
+                                <p><i>URSP Rule Info<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRuleId1",
+                                    <br/>  "plmnId": "45005",
+                                    <br/>  "precedence": 0,
+                                    <br/>  "trafficDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "type": "dnn",
+                                    <br/>      "value": "mcptt"
+                                    <br/>    &#125;
+                                    <br/>  ],
+                                    <br/>  "routeSelectionDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "routeSelectionDescriptor": [
+                                    <br/>        &#123;
+                                    <br/>          "type": "SNSSAI",
+                                    <br/>          "value": "1-000000"
+                                    <br/>        &#125;
+                                    <br/>      ]
+                                    <br/>    &#125;
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 201 Created</p><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                URSP Rule을 생성</td>
+                        </tr>
+                        <tr>
+                            <td>/ue-policies/ursp-rules/<i>&#123;urspRuleId&#125;</i></td>
+                            <td>DELETE <BsCheckSquare /></td>
+                            <td>
+                                <p><i>URSP Rule ID<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRuleId1"
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 204 No Content</p><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                URSP Rule을 삭제</td>
+                        </tr>
+                        <tr>
+                            <td>/ue-policies/ursp-rules/<i>&#123;urspRuleId&#125;</i></td>
+                            <td>GET <BsCheckSquare /></td>
+                            <td>
+                                <p><i>URSP Rule ID<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRuleId1"
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 200 OK
+                                <br/>Content: URSP Rules??</p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRuleId1",
+                                    <br/>  "plmnId": "45005",
+                                    <br/>  "precedence": 0,
+                                    <br/>  "trafficDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "type": "dnn",
+                                    <br/>      "value": "mcptt"
+                                    <br/>    &#125;
+                                    <br/>  ],
+                                    <br/>  "routeSelectionDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "routeSelectionDescriptor": [
+                                    <br/>        &#123;
+                                    <br/>          "type": "SNSSAI",
+                                    <br/>          "value": "1-000000"
+                                    <br/>        &#125;
+                                    <br/>      ]
+                                    <br/>    &#125;
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                URSP Rule을 조회</td>
                         </tr>
                     </tbody>
                 </table>
