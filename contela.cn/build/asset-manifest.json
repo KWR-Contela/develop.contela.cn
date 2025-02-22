@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/develop.contela.cn/static/css/main.6cd41680.css",
+    "main.js": "/develop.contela.cn/static/js/main.95cca5c0.js",
+    "static/js/453.90fdcfbd.chunk.js": "/develop.contela.cn/static/js/453.90fdcfbd.chunk.js",
+    "static/media/page_preparing.jpg": "/develop.contela.cn/static/media/page_preparing.a848202c77dd1faa1af3.jpg",
+    "index.html": "/develop.contela.cn/index.html",
+    "main.6cd41680.css.map": "/develop.contela.cn/static/css/main.6cd41680.css.map",
+    "main.95cca5c0.js.map": "/develop.contela.cn/static/js/main.95cca5c0.js.map",
+    "453.90fdcfbd.chunk.js.map": "/develop.contela.cn/static/js/453.90fdcfbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cd41680.css",
+    "static/js/main.95cca5c0.js"
+  ]
+}
