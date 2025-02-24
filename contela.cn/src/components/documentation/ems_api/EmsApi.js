@@ -91,7 +91,7 @@ const EmsApi = () => (
                     <tbody>
                         <tr>
                             <td rowSpan='3'>/pre-config/plmns</td>
-                            <td>GET <BsCheckSquare /></td>
+                            <td>GET <BsCheckSquareFill /></td>
                             <td></td>
                             <td>
                                 <p><b>Success</b>
@@ -113,7 +113,7 @@ const EmsApi = () => (
                             </td>
                         </tr>
                         <tr>
-                            <td>POST <BsCheckSquare /></td>
+                            <td>POST <BsCheckSquareFill /></td>
                             <td>
                                 <p>1*4<i>PLMN</i><br/>
                                 <sup><i class="ApiMandatory">Required</i></sup></p>
@@ -133,7 +133,7 @@ const EmsApi = () => (
                                 PCF에 PLMN을 Create</td>
                         </tr>
                         <tr>
-                            <td>DELETE <BsCheckSquare /></td>
+                            <td>DELETE <BsCheckSquareFill /></td>
                             <td>
                                 <p>1*4<i>PLMN</i><br/>
                                 <sup><i class="ApiMandatory">Required</i></sup></p>
@@ -155,7 +155,7 @@ const EmsApi = () => (
 
                         <tr>
                             <td rowSpan='3'>/pre-config/tacs</td>
-                            <td>GET <BsCheckSquare /></td>
+                            <td>GET <BsCheckSquareFill /></td>
                             <td></td>
                             <td>
                                 <p><b>Success</b>
@@ -177,7 +177,7 @@ const EmsApi = () => (
                         </td>
                         </tr>
                         <tr>
-                            <td>POST <BsCheckSquare /></td>
+                            <td>POST <BsCheckSquareFill /></td>
                             <td>
                                 <p>1*32<i>TAC</i><br/>
                                 <sup><i class="ApiMandatory">Required</i></sup></p>
@@ -197,7 +197,7 @@ const EmsApi = () => (
                                 PCF에 TAC를 Create</td>
                         </tr>
                         <tr>
-                            <td>DELETE <BsCheckSquare /></td>
+                            <td>DELETE <BsCheckSquareFill /></td>
                             <td>
                                 <p>1*32<i>TAC</i><br/>
                                 <sup><i class="ApiMandatory">Required</i></sup></p>
@@ -238,7 +238,7 @@ const EmsApi = () => (
                     <tbody>
                         <tr>
                             <td rowSpan='4'>/am-policies</td>
-                            <td>GET <BsCheckSquare /></td>
+                            <td>GET <BsCheckSquareFill /></td>
                             <td></td>
                             <td>
                                 <p style={{whiteSpace: "pre-wrap"}}><b>Success</b>
@@ -283,7 +283,7 @@ const EmsApi = () => (
                             
                         </tr>
                         <tr>
-                            <td>POST <BsCheckSquare /></td>
+                            <td>POST <BsCheckSquareFill /></td>
                             <td>
                                 <p>(<i>AM Policy Name,
                                 <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>  Required</i></sup>
@@ -318,7 +318,7 @@ const EmsApi = () => (
                                 PCF에 AM Policy Info를 Create</td>
                         </tr>
                         <tr>
-                            <td>PUT <BsCheckSquare /></td>
+                            <td>PUT <BsCheckSquareFill /></td>
                             <td>
                                 <p>(<i>AM Policy Name,<br/>
                                 <sup><i class="ApiMandatory">&nbsp;&nbsp;Required</i></sup><br/>
@@ -351,7 +351,7 @@ const EmsApi = () => (
                             </td>
                         </tr>
                         <tr>
-                            <td>DELETE <BsCheckSquare /></td>
+                            <td>DELETE <BsCheckSquareFill /></td>
                             <td>
                                 <i>AM Policy Name</i>
                                 <br/><sup><i class="ApiMandatory">Required</i></sup>
@@ -375,7 +375,7 @@ const EmsApi = () => (
 
                         <tr>
                             <td>/am-policies/policy-name</td>
-                            <td>GET <BsCheckSquare /></td>
+                            <td>GET <BsCheckSquareFill /></td>
                             <td></td>
                             <td>
                                 <p><b>Success</b>
@@ -401,7 +401,7 @@ const EmsApi = () => (
                         
                         <tr>
                             <td>/am-policies/policy-name/<i>&#123;policyName&#125;</i></td>
-                            <td>GET <BsCheckSquare /></td>
+                            <td>GET <BsCheckSquareFill /></td>
                             <td></td>
                             <td>
                                 <p style={{whiteSpace: "pre-wrap"}}><b>Success</b>
@@ -442,6 +442,141 @@ const EmsApi = () => (
             </div>
 
             <div class="card-header">
+                URSP Rule
+            </div>
+            <div class="card-body">
+                <table class="datatable-table">
+                    <thead>
+                        <tr>
+                            <th>Resource URI</th>
+                            <th>HTTP Method</th>
+                            <th>Request Body</th>
+                            <th>Response Body</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                            <td rowSpan='2'>/ue-policies/ursp/ursp-rules</td>
+                            <td>GET <BsCheckSquare /></td>
+                            <td>
+                                <p><i>Get Type<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "getType": 0
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 200 OK
+                                <br/>Content: 1*384<i>URSP Rules</i>
+                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                                Required</i></sup>
+                                </p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  [
+                                    <br/>    &#123;
+                                    <br/>      "urspRuleId": "TestRuleId1",
+                                    <br/>      "plmnId": "45005",
+                                    <br/>      "precedence": 0,
+                                    <br/>      "trafficDescriptors": [
+                                    <br/>        &#123;
+                                    <br/>          "type": "dnn",
+                                    <br/>          "value": "mcptt"
+                                    <br/>        &#125;
+                                    <br/>      ],
+                                    <br/>      "routeSelectionDescriptors": [
+                                    <br/>        &#123;
+                                    <br/>          "precedence": 0,
+                                    <br/>          "routeSelectionDescriptor": [
+                                    <br/>            &#123;
+                                    <br/>              "type": "SNSSAI",
+                                    <br/>              "value": "1-000000"
+                                    <br/>            &#125;
+                                    <br/>          ]
+                                    <br/>        &#125;
+                                    <br/>      ]
+                                    <br/>    &#125;,
+                                    <br/>    . . .
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                PCF 내 모든 URSP Rule(s)를 조회<br/>
+                                <br/><b>Get Type(0)</b>: 각 URSP Rule의 전체 정보 조회
+                                <br/><b>Get Type(1)</b>: 각 URSP Rule의 ID만 조회
+                                <br/><br/>
+                                <b>[Restrictions]</b><br/>
+                                URSP Rule(s)의 최대 개수: 384개
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>POST <BsCheckSquare /></td>
+                            <td>
+                                <p><i>URSP Rule Info<br/>
+                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
+                                <pre>
+                                    Ex)<br/>&#123;
+                                    <br/>  "urspRuleId": "TestRuleId1",
+                                    <br/>  "plmnId": "45005",
+                                    <br/>  "precedence": 0,
+                                    <br/>  "trafficDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "type": "dnn",
+                                    <br/>      "value": "mcptt"
+                                    <br/>    &#125;
+                                    <br/>  ],
+                                    <br/>  "routeSelectionDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "precedence": 0,
+                                    <br/>      "routeSelectionDescriptor": [
+                                    <br/>        &#123;
+                                    <br/>          "type": "SNSSAI",
+                                    <br/>          "value": "1-000000"
+                                    <br/>        &#125;
+                                    <br/>      ]
+                                    <br/>    &#125;
+                                    <br/>  ]
+                                    <br/>&#125;
+                                </pre>
+                            </td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 201 Created</p><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                URSP Rule을 생성</td>
+                        </tr>
+                        <tr>
+                            <td>/ue-policies/ursp/ursp-rules/&#123;urspRuleId&#125;</td>
+                            <td>DELETE <BsCheckSquare /></td>
+                            <td></td>
+                            <td>
+                                <p><b>Success</b>
+                                <br/>Code: 204 No Content</p><hr/>
+                                <p><b>Fail</b>
+                                <br/>Code: 400 Bad Request                                
+                                <br/>Code: 404 not Found</p>
+                            </td>
+                            <td>
+                                <b>[Description]</b><br/>
+                                URSP Rule을 삭제</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-header">
                 Policy by Subscriber
             </div>
             <div class="card-body">
@@ -471,8 +606,8 @@ const EmsApi = () => (
                             <td>
                                 <p><b>Success</b>
                                 <br/>Code: 200 OK
-                                <br/>Content: <i>[AM Policy Name],
-                                <br/>[URSP Rule Ids]</i>
+                                <br/>Content: <i style={{whiteSpace: "pre-wrap"}}>[AM Policy Name],
+                                <br/>               [URSP Rule Ids]</i>
                                 <br/></p>
                                 <pre>
                                     Ex)<br/>&#123;
@@ -507,7 +642,7 @@ const EmsApi = () => (
                                 <p><b>Success</b>
                                 <br/>Code: 200 OK
                                 <br/>Content: 1*20000<i>IMSI</i>
-                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                     Required</i></sup></p>
+                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                    Required</i></sup></p>
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": [
@@ -541,7 +676,7 @@ const EmsApi = () => (
                                 <p><b>Success</b>
                                 <br/>Code: 200 OK
                                 <br/>Content: 1*20000<i>IMSI</i>
-                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                     Required</i></sup></p>
+                                <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                    Required</i></sup></p>
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": [
@@ -654,7 +789,7 @@ const EmsApi = () => (
                                 <pre>
                                     Ex)<br/>&#123;
                                     <br/>  "imsi": "450051000000000",
-                                    <br/>  "policyType": "ue"
+                                    <br/>  "policyType": 1
                                     <br/>&#125;
                                 </pre>
                             </td>
@@ -667,184 +802,16 @@ const EmsApi = () => (
                             </td>
                             <td>
                                 <b>[Description]</b><br/>
-                                Policy By Subs에 등록된 특정 IMSI에 대한 Policy의 강제 적용을 시도</td>
+                                Policy By Subs에 등록된 특정 IMSI에 대한 Policy의 강제 적용을 시도
+                                <br/><br/>
+                                <b>Policy Type(0)</b>: AM Policy<br/>
+                                <b>Policy Type(1)</b>: URSP Rule(s)
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="card-header">
-                URSP Rule
-            </div>
-            <div class="card-body">
-                <table class="datatable-table">
-                    <thead>
-                        <tr>
-                            <th>Resource URI</th>
-                            <th>HTTP Method</th>
-                            <th>Request Body</th>
-                            <th>Response Body</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                            <td rowSpan='2'>/ue-policies/ursp-rules</td>
-                            <td>GET <BsCheckSquare /></td>
-                            <td></td>
-                            <td>
-                                <p><b>Success</b>
-                                <br/>Code: 200 OK
-                                <br/>Content: <i>URSP Rules??</i>
-                                <br/></p>
-                                <pre>
-                                    Ex)<br/>&#123;
-                                    <br/>  [
-                                    <br/>    &#123;
-                                    <br/>      "urspRuleId": "TestRuleId1",
-                                    <br/>      "plmnId": "45005",
-                                    <br/>      "precedence": 0,
-                                    <br/>      "trafficDescriptors": [
-                                    <br/>        &#123;
-                                    <br/>          "type": "dnn",
-                                    <br/>          "value": "mcptt"
-                                    <br/>        &#125;
-                                    <br/>      ],
-                                    <br/>      "routeSelectionDescriptors": [
-                                    <br/>        &#123;
-                                    <br/>          "routeSelectionDescriptor": [
-                                    <br/>            &#123;
-                                    <br/>              "type": "SNSSAI",
-                                    <br/>              "value": "1-000000"
-                                    <br/>            &#125;
-                                    <br/>          ]
-                                    <br/>        &#125;
-                                    <br/>      ]
-                                    <br/>    &#125;,
-                                    <br/>    . . .
-                                    <br/>  ]
-                                    <br/>&#125;
-                                </pre><hr/>
-                                <p><b>Fail</b>
-                                <br/>Code: 400 Bad Request                                
-                                <br/>Code: 404 not Found</p>
-                            </td>
-                            <td>
-                                <b>[Description]</b><br/>
-                                PCF 내 생성된 모든 URSP Rule(s)를 조회</td>
-                        </tr>
-                        <tr>
-                            <td>POST <BsCheckSquare /></td>
-                            <td>
-                                <p><i>URSP Rule Info<br/>
-                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
-                                <pre>
-                                    Ex)<br/>&#123;
-                                    <br/>  "urspRuleId": "TestRuleId1",
-                                    <br/>  "plmnId": "45005",
-                                    <br/>  "precedence": 0,
-                                    <br/>  "trafficDescriptors": [
-                                    <br/>    &#123;
-                                    <br/>      "type": "dnn",
-                                    <br/>      "value": "mcptt"
-                                    <br/>    &#125;
-                                    <br/>  ],
-                                    <br/>  "routeSelectionDescriptors": [
-                                    <br/>    &#123;
-                                    <br/>      "routeSelectionDescriptor": [
-                                    <br/>        &#123;
-                                    <br/>          "type": "SNSSAI",
-                                    <br/>          "value": "1-000000"
-                                    <br/>        &#125;
-                                    <br/>      ]
-                                    <br/>    &#125;
-                                    <br/>  ]
-                                    <br/>&#125;
-                                </pre>
-                            </td>
-                            <td>
-                                <p><b>Success</b>
-                                <br/>Code: 201 Created</p><hr/>
-                                <p><b>Fail</b>
-                                <br/>Code: 400 Bad Request</p>
-                            </td>
-                            <td>
-                                <b>[Description]</b><br/>
-                                URSP Rule을 생성</td>
-                        </tr>
-                        <tr>
-                            <td>/ue-policies/ursp-rules/<i>&#123;urspRuleId&#125;</i></td>
-                            <td>DELETE <BsCheckSquare /></td>
-                            <td>
-                                <p><i>URSP Rule ID<br/>
-                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
-                                <pre>
-                                    Ex)<br/>&#123;
-                                    <br/>  "urspRuleId": "TestRuleId1"
-                                    <br/>&#125;
-                                </pre>
-                            </td>
-                            <td>
-                                <p><b>Success</b>
-                                <br/>Code: 204 No Content</p><hr/>
-                                <p><b>Fail</b>
-                                <br/>Code: 400 Bad Request                                
-                                <br/>Code: 404 not Found</p>
-                            </td>
-                            <td>
-                                <b>[Description]</b><br/>
-                                URSP Rule을 삭제</td>
-                        </tr>
-                        <tr>
-                            <td>/ue-policies/ursp-rules/<i>&#123;urspRuleId&#125;</i></td>
-                            <td>GET <BsCheckSquare /></td>
-                            <td>
-                                <p><i>URSP Rule ID<br/>
-                                <sup><i class="ApiMandatory">Required</i></sup><br/></i></p>
-                                <pre>
-                                    Ex)<br/>&#123;
-                                    <br/>  "urspRuleId": "TestRuleId1"
-                                    <br/>&#125;
-                                </pre>
-                            </td>
-                            <td>
-                                <p><b>Success</b>
-                                <br/>Code: 200 OK
-                                <br/>Content: URSP Rules??</p>
-                                <pre>
-                                    Ex)<br/>&#123;
-                                    <br/>  "urspRuleId": "TestRuleId1",
-                                    <br/>  "plmnId": "45005",
-                                    <br/>  "precedence": 0,
-                                    <br/>  "trafficDescriptors": [
-                                    <br/>    &#123;
-                                    <br/>      "type": "dnn",
-                                    <br/>      "value": "mcptt"
-                                    <br/>    &#125;
-                                    <br/>  ],
-                                    <br/>  "routeSelectionDescriptors": [
-                                    <br/>    &#123;
-                                    <br/>      "routeSelectionDescriptor": [
-                                    <br/>        &#123;
-                                    <br/>          "type": "SNSSAI",
-                                    <br/>          "value": "1-000000"
-                                    <br/>        &#125;
-                                    <br/>      ]
-                                    <br/>    &#125;
-                                    <br/>  ]
-                                    <br/>&#125;
-                                </pre><hr/>
-                                <p><b>Fail</b>
-                                <br/>Code: 400 Bad Request                                
-                                <br/>Code: 404 not Found</p>
-                            </td>
-                            <td>
-                                <b>[Description]</b><br/>
-                                URSP Rule을 조회</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
     </>
