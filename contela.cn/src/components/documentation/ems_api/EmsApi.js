@@ -277,7 +277,8 @@ const EmsApi = () => (
                                 <b>[Restrictions]</b><br/>
                                 AM Policy Info 최대 개수: 10개,<br/>
                                 AM Policy Name 최대 길이: 64,<br/>
-                                RFSP Index 범위: 1 ~ 256<br/><br/>
+                                RFSP Index 범위: 1 ~ 256<br/>
+                                TAC List의 최대 개수: 16개<br/><br/>
                                 여러개인 경우, Linked Reply로 전송함.
                             </td>
                             
