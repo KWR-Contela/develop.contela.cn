@@ -467,8 +467,9 @@ const EmsApi = () => (
                                     Ex)<br/>&#123;
                                     <br/>  "getType": 0
                                     <br/>&#125;
+                                    <br/> 
                                     Ex)<br/>&#123;
-                                    <br/>  "getType": 1
+                                    <br/>  "getType": 1,
                                     <br/>  "urspRuleId": "TestRuleId1"
                                     <br/>&#125;
                                 </pre>
