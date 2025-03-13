@@ -467,6 +467,10 @@ const EmsApi = () => (
                                     Ex)<br/>&#123;
                                     <br/>  "getType": 0
                                     <br/>&#125;
+                                    Ex)<br/>&#123;
+                                    <br/>  "getType": 1
+                                    <br/>  "urspRuleId": "TestRuleId1"
+                                    <br/>&#125;
                                 </pre>
                             </td>
                             <td>
@@ -476,31 +480,43 @@ const EmsApi = () => (
                                 <br/><sup><i class="ApiMandatory" style={{whiteSpace: "pre-wrap"}}>                                Required</i></sup>
                                 </p>
                                 <pre>
+                                    Ex)
+                                    <br/>&#123;
+                                    <br/>  "urspRuleIds": [
+                                    <br/>     "TestRuleId1",
+                                    <br/>     "TestRuleId2",
+                                    <br/>     ...
+                                    <br/>  ]
+                                    <br/>&#125;
+                                    <br/> 
+                                </pre>
+                                <pre>
                                     Ex)<br/>&#123;
-                                    <br/>  [
+                                    <br/>  "urspRuleId": "TestRuleId1",
+                                    <br/>  "plmnId": "45005",
+                                    <br/>  "precedence": 0,
+                                    <br/>  "trafficDescriptors": [
                                     <br/>    &#123;
-                                    <br/>      "urspRuleId": "TestRuleId1",
-                                    <br/>      "plmnId": "45005",
-                                    <br/>      "precedence": 0,
-                                    <br/>      "trafficDescriptors": [
+                                    <br/>      "type": "dnn",
+                                    <br/>      "value": 
                                     <br/>        &#123;
-                                    <br/>          "type": "dnn",
-                                    <br/>          "value": "mcptt"
+                                    <br/>          "dnn": "test.dnn"
                                     <br/>        &#125;
-                                    <br/>      ],
-                                    <br/>      "routeSelectionDescriptors": [
+                                    <br/>    &#125;
+                                    <br/>  ],
+                                    <br/>  "routeSelectionDescriptors": [
+                                    <br/>    &#123;
+                                    <br/>      "precedence": 0,
+                                    <br/>      "routeSelectionDescriptor": [
                                     <br/>        &#123;
-                                    <br/>          "precedence": 0,
-                                    <br/>          "routeSelectionDescriptor": [
+                                    <br/>          "type": "SNSSAI",
+                                    <br/>          "value":
                                     <br/>            &#123;
-                                    <br/>              "type": "SNSSAI",
-                                    <br/>              "value": "1-000000"
+                                    <br/>              "snssai": "1-000000"
                                     <br/>            &#125;
-                                    <br/>          ]
                                     <br/>        &#125;
                                     <br/>      ]
-                                    <br/>    &#125;,
-                                    <br/>    . . .
+                                    <br/>    &#125;
                                     <br/>  ]
                                     <br/>&#125;
                                 </pre><hr/>
@@ -510,9 +526,9 @@ const EmsApi = () => (
                             </td>
                             <td>
                                 <b>[Description]</b><br/>
-                                PCF 내 모든 URSP Rule(s)를 조회<br/>
-                                <br/><b>Get Type(0)</b>: 각 URSP Rule의 전체 정보 조회
-                                <br/><b>Get Type(1)</b>: 각 URSP Rule의 ID만 조회
+                                PCF 내 URSP Rule(s)를 조회<br/>
+                                <br/><b>Get Type(0)</b>: PCF 내 모든 URSP Rule(s)의 ID만 조회
+                                <br/><b>Get Type(1)</b>: 특정 URSP Rule 조회
                                 <br/><br/>
                                 <b>[Restrictions]</b><br/>
                                 URSP Rule(s)의 최대 개수: 384개
@@ -531,7 +547,10 @@ const EmsApi = () => (
                                     <br/>  "trafficDescriptors": [
                                     <br/>    &#123;
                                     <br/>      "type": "dnn",
-                                    <br/>      "value": "mcptt"
+                                    <br/>      "value": 
+                                    <br/>        &#123;
+                                    <br/>          "dnn": "test.dnn"
+                                    <br/>        &#125;
                                     <br/>    &#125;
                                     <br/>  ],
                                     <br/>  "routeSelectionDescriptors": [
@@ -540,7 +559,10 @@ const EmsApi = () => (
                                     <br/>      "routeSelectionDescriptor": [
                                     <br/>        &#123;
                                     <br/>          "type": "SNSSAI",
-                                    <br/>          "value": "1-000000"
+                                    <br/>          "value":
+                                    <br/>            &#123;
+                                    <br/>              "snssai": "1-000000"
+                                    <br/>            &#125;
                                     <br/>        &#125;
                                     <br/>      ]
                                     <br/>    &#125;
