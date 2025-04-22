@@ -15,7 +15,7 @@ const DocCncr = () => (
                 </NavLink>
                 <a><BiChevronRight /></a>
                 <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none", color: "black"}}>
-                    <a>CN Group Coding Rule</a>
+                    <a>CN Group Coding Guide</a>
                 </NavLink>
             </a>
         </div>

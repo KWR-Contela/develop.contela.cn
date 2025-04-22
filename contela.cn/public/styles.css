@@ -202,6 +202,10 @@ ul ol {
   margin-bottom: 0;
 }
 
+ul li {
+  margin-bottom:0.5rem;
+}
+
 dt {
   font-weight: 700;
 }
@@ -10952,6 +10956,15 @@ section {
   color: #ffb400;
   font-size: 0.6rem;
   text-transform: uppercase;
+}
+
+.Cncr-Abbreviation {
+  max-width: 500px;
+  border: 1px solid #d4cbb6;
+  border-radius: 0.3em;
+  background-color: #f2efe4;
+  margin: 1em 0 1em 0.5em;
+  padding: 0.8em 1.2em 0.4em;
 }
 
 /*!

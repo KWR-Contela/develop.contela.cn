@@ -36,9 +36,9 @@ function Documentation() {
                                         <div class="text-center">
                                             <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none", color: "black" }}>
                                                 <i class="bi-bookmark-star icon-feature text-gradient d-block mb-3"></i>
-                                                <h3 class="font-alt">CN Group Coding Rule</h3>
+                                                <h3 class="font-alt">CN Group Coding Guide</h3>
                                             </NavLink>
-                                            <p class="text-muted mb-0">Read about the CN Group Coding Rule that you can use to learn about the essential coding rule in Contela CN Group.</p>
+                                            <p class="text-muted mb-0">Read about the CN Group Coding Guide that you can use to learn about the essential coding rule in Contela CN Group.</p>
                                         </div>
                                     </div>
                                 </div>

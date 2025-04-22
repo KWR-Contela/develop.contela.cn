@@ -1,7 +1,6 @@
 {
   "name": "contela.cn",
   "version": "0.1.0",
-  "homepage": "https://kwr-contela.github.io/develop.contela.cn/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

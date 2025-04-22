@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import page_preparing from "./page_preparing.jpg";
+import cn_organization from "./CN_Organization.png";
 
 const OrgHome = () => {
     return (
         <div id="OrgHome">
-            <center><img src= {page_preparing} width="800"/></center>
+            <center><img src= {cn_organization} width="auto" style={{ paddingTop: "50px", paddingBottom: "50px" }}/></center>
         </div>
     )
 }
