@@ -10,6 +10,7 @@ import Documentation from './components/documentation/Documentation';
 import CNCR from './components/documentation/reference/cncr/CNCR';
 import InitPCSetup from './components/documentation/reference/init_pc_setup/Init_PC_Setup';
 import EmsApi from './components/documentation/ems_api/EmsApi';
+import VCSGit from './components/documentation/reference/vcs_git/VCS_Git';
 import DocLayout from './components/documentation/doc_layout/DocLayout';
 
 const Home = () => {
@@ -84,6 +85,18 @@ const DocCncrHome = () => {
   )
 }
 
+const DocVcsGitHome = () => {
+  return (
+    <div>
+      <DocLayout>
+        <Routes>
+          <Route path="/" element={<VCSGit />} />
+        </Routes>
+      </DocLayout>
+    </div>
+  )
+}
+
 function App() {
   return (
     <div>
@@ -93,7 +106,8 @@ function App() {
         <Route path="/documentation" element={<DocHome />} /> 
         <Route path="/documentation/api-ems-pcf" element={<DocApiEmsPcfHome />} /> 
         <Route path="/documentation/ref-init-pc-setup" element={<DocPcSetupHome />} /> 
-        <Route path="/documentation/ref-cncr" element={<DocCncrHome />} /> 
+        <Route path="/documentation/ref-cncr" element={<DocCncrHome />} />
+        <Route path="/documentation/ref-vcs-git" element={<DocVcsGitHome />} />
       </Routes>
     </div>
   );

@@ -31,6 +31,13 @@ function Sidebar() {
                                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                         </a>
                                     </NavLink>
+                                    <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none" }}>
+                                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                            Version Control System(GIT)
+                                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                        </a>
+                                    </NavLink>
                             </div>
                         </div>
                     </nav>

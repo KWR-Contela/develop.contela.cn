@@ -41,6 +41,15 @@ function Documentation() {
                                             <p class="text-muted mb-0">Read about the CN Group Coding Guide that you can use to learn about the essential coding rule in Contela CN Group.</p>
                                         </div>
                                     </div>
+                                    <div class="col-md-6 mb-5">
+                                        <div class="text-center">
+                                            <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none", color: "black" }}>
+                                                <i class="bi-git icon-feature text-gradient d-block mb-3"></i>
+                                                <h3 class="font-alt">Version Control System(GIT)</h3>
+                                            </NavLink>
+                                            <p class="text-muted mb-0">Introduction and description of the version control system used by CN Group.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                     </div>
