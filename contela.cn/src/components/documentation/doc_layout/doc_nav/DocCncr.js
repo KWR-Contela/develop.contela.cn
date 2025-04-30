@@ -10,12 +10,12 @@ const DocCncr = () => (
                     <BiHomeAlt2 />
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Documentation</a>
+                <NavLink to="/documentation" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Documentation</a>
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none", color: "black"}}>
-                    <a>CN Group Coding Guide</a>
+                <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">CN Group Coding Guide</a>
                 </NavLink>
             </a>
         </div>

@@ -12,7 +12,7 @@ const Section2 = () => (
                                 <div class="text-center">
                                     <NavLink to="/organization" style={{ textDecoration: "none", color: "black" }}>
                                         <i class="bi-person icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Organization</h3>
+                                        <h3 class="font-alt NavHover">Organization</h3>
                                     </NavLink>
                                     <p class="text-muted mb-0">Organization of Core Network Group in Contela.</p>
                                 </div>
@@ -21,7 +21,7 @@ const Section2 = () => (
                                 <div class="text-center">
                                     <NavLink to="/documentation" style={{ textDecoration: "none", color: "black" }}>
                                         <i class="bi-files icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Documentation</h3>
+                                        <h3 class="font-alt NavHover">Documentation</h3>
                                     </NavLink>
                                     <p class="text-muted mb-0">APIs, PC Setup Procedure, Coding Rule etc.</p>
                                 </div>

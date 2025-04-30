@@ -10,12 +10,12 @@ const DocPcSetupNav = () => (
                     <BiHomeAlt2 />
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Documentation</a>
+                <NavLink to="/documentation" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Documentation</a>
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation/ref-init-pc-setup" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Initial PC Setup Procedure</a>
+                <NavLink to="/documentation/ref-init-pc-setup" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Initial PC Setup Procedure</a>
                 </NavLink>
             </a>
         </div>

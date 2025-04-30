@@ -10,12 +10,12 @@ const DocVcsGitNav = () => (
                     <BiHomeAlt2 />
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Documentation</a>
+                <NavLink to="/documentation" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Documentation</a>
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Version Control System(GIT)</a>
+                <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Version Control System(GIT)</a>
                 </NavLink>
             </a>
         </div>

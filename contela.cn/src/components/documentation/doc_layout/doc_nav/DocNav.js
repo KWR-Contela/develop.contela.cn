@@ -10,8 +10,8 @@ const DocNav = () => (
                     <BiHomeAlt2 />
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Documentation</a>
+                <NavLink to="/documentation" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Documentation</a>
                 </NavLink>
             </a>
         </div>

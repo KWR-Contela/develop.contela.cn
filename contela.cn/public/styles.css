@@ -10967,6 +10967,16 @@ section {
   padding: 0.8em 1.2em 0.4em;
 }
 
+.NavHover {
+  text-decoration: none;
+  color: black;
+}
+
+.NavHover:hover {
+  text-decoration: none;
+  color: #2937f0;
+}
+
 /*!
  * html5-device-mockups (https://github.com/pixelsign/html5-device-mockups)
  * Copyright 2013 - 2017 pixelsign

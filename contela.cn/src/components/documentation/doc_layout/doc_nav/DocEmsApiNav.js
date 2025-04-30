@@ -10,12 +10,12 @@ const DocEmsApiNav = () => (
                     <BiHomeAlt2 />
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation" style={{ textDecoration: "none", color: "black"}}>
-                    <a>Documentation</a>
+                <NavLink to="/documentation" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">Documentation</a>
                 </NavLink>
                 <a><BiChevronRight /></a>
-                <NavLink to="/documentation/api-ems-pcf" style={{ textDecoration: "none", color: "black"}}>
-                    <a>PCF Policy Control APIs</a>
+                <NavLink to="/documentation/api-ems-pcf" style={{ textDecoration: "none" }}>
+                    <a class="NavHover">PCF Policy Control APIs</a>
                 </NavLink>
             </a>
         </div>
