@@ -16,10 +16,12 @@ function Documentation() {
                             <div class="row gx-5">
                                 <div class="mb-5">
                                     <div class="text-center">
-                                        <NavLink to="/documentation/api-ems-pcf" style={{ textDecoration: "none", color: "black" }}>
-                                            <i class="bi-gear icon-feature text-gradient d-block mb-3"></i>
-                                            <h4 class="font-alt NavHover">PCF Policy Control APIs</h4>
-                                        </NavLink>
+                                        <div style={{ paddingLeft: "20rem", paddingRight: "20rem" }}>
+                                            <NavLink to="/documentation/api-ems-pcf" style={{ textDecoration: "none", color: "black" }}>
+                                                <i class="bi-gear icon-feature text-gradient d-block mb-3"></i>
+                                                <h4 class="font-alt NavHover">PCF Policy Control APIs</h4>
+                                            </NavLink>
+                                        </div>
                                         <p class="text-muted mb-0">Read about the PCF Policy Control APIs that you can use to control specific policy in PCF.</p>
                                     </div>
                                 </div>
@@ -36,28 +38,34 @@ function Documentation() {
                             <div class="row gx-5">
                                 <div class="col-md-6 mb-5">
                                     <div class="text-center">
-                                        <NavLink to="/documentation/ref-init-pc-setup" style={{ textDecoration: "none", color: "black" }}>
-                                            <i class="bi-book icon-feature text-gradient d-block mb-3"></i>
-                                            <h4 class="font-alt NavHover">Initial PC Setup Procedure</h4>
-                                        </NavLink>
+                                        <div style={{ paddingLeft: "6.5rem", paddingRight: "6.5rem" }}>
+                                            <NavLink to="/documentation/ref-init-pc-setup" style={{ textDecoration: "none", color: "black" }}>
+                                                <i class="bi-book icon-feature text-gradient d-block mb-3"></i>
+                                                <h4 class="font-alt NavHover">Initial PC Setup Procedure</h4>
+                                            </NavLink>
+                                        </div>
                                         <p class="text-muted mb-0">Read about the Initial PC Setup Procedure that you can use to get how to setup PC when you join Contela for the first time or when you get a new PC.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
                                     <div class="text-center">
-                                        <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none", color: "black" }}>
-                                            <i class="bi-bookmark-star icon-feature text-gradient d-block mb-3"></i>
-                                            <h4 class="font-alt NavHover">CN Group Coding Guide</h4>
-                                        </NavLink>
+                                        <div style={{ paddingLeft: "7rem", paddingRight: "7rem" }}>
+                                            <NavLink to="/documentation/ref-cncr" style={{ textDecoration: "none", color: "black" }}>
+                                                <i class="bi-bookmark-star icon-feature text-gradient d-block mb-3"></i>
+                                                <h4 class="font-alt NavHover">CN Group Coding Guide</h4>
+                                            </NavLink>
+                                        </div>
                                         <p class="text-muted mb-0">Read about the CN Group Coding Guide that you can use to learn about the essential coding rule in Contela CN Group.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
                                     <div class="text-center">
-                                        <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none", color: "black" }}>
-                                            <i class="bi-git icon-feature text-gradient d-block mb-3"></i>
-                                            <h4 class="font-alt NavHover">Version Control System(GIT)</h4>
-                                        </NavLink>
+                                        <div style={{ paddingLeft: "6rem", paddingRight: "6rem" }}>
+                                            <NavLink to="/documentation/ref-vcs-git" style={{ textDecoration: "none", color: "black" }}>
+                                                <i class="bi-git icon-feature text-gradient d-block mb-3"></i>
+                                                <h4 class="font-alt NavHover">Version Control System(GIT)</h4>
+                                            </NavLink>
+                                        </div>
                                         <p class="text-muted mb-0">Introduction and description of the version control system used by CN Group.</p>
                                     </div>
                                 </div>
